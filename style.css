@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Mulidisplay=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@400;700&display=swap');
 
 
 * {
@@ -6,13 +6,46 @@
 }
 
 body {
-    background-color: #e1e1e1;
-    font-family: 'Muli', sans-serif;
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     align-items: center; 
     justify-content: center;
-    text-align: center;
     height: 100vh;
     overflow: hidden;
     margin: 0;
 }
+
+button {
+    background-color: yellow;
+    color: #000;
+    border: 1px yellow solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+button .circle {
+    position: absolute;
+    background-color: #000;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
